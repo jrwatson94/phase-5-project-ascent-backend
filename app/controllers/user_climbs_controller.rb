@@ -1,4 +1,5 @@
 class UserClimbsController < ApplicationController
+    skip_before_action :authorized, only: [:index, :show]
     def new 
         user_climb = UserClimb.new
         render json: user_climb

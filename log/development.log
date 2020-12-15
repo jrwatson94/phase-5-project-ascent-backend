@@ -2282,3 +2282,1304 @@ Processing by ClimbsController#index as */*
 Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.6ms | Allocations: 20149)
 
 
+Started GET "/" for ::1 at 2020-12-15 11:22:59 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/reid/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/reid/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.3ms | Allocations: 315)
+Completed 200 OK in 24ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 1705)
+
+
+Started GET "/login" for ::1 at 2020-12-15 11:23:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auto_login" for ::1 at 2020-12-15 11:23:20 -0500
+  
+SyntaxError (/Users/reid/Development/code/Mod5/phase-5-project-ascent/phase-5-project-ascent-backend/app/controllers/auth_controller.rb:7: syntax error, unexpected ',', expecting =>
+... render json: {user: user, jwt, :token success: "Welcome bac...
+...                              ^
+/Users/reid/Development/code/Mod5/phase-5-project-ascent/phase-5-project-ascent-backend/app/controllers/auth_controller.rb:7: syntax error, unexpected '}', expecting end
+...elcome back, #{user.username}"}
+...                              ^):
+  
+app/controllers/auth_controller.rb:7: syntax error, unexpected ',', expecting =>
+app/controllers/auth_controller.rb:7: syntax error, unexpected '}', expecting end
+app/controllers/auth_controller.rb:7: syntax error, unexpected ',', expecting =>
+app/controllers/auth_controller.rb:7: syntax error, unexpected '}', expecting end
+app/controllers/auth_controller.rb:7: syntax error, unexpected ',', expecting =>
+app/controllers/auth_controller.rb:7: syntax error, unexpected '}', expecting end
+Started GET "/auto_login" for ::1 at 2020-12-15 11:24:35 -0500
+Processing by AuthController#auto_login as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 879)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:7:in `session_user'
+app/controllers/auth_controller.rb:14:in `auto_login'
+Started GET "/user_is_authed" for ::1 at 2020-12-15 11:25:08 -0500
+  
+AbstractController::ActionNotFound (The action 'user_is_authed' could not be found for AuthController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/user_is_authed" for ::1 at 2020-12-15 11:26:19 -0500
+  
+ArgumentError (Before process_action callback :require_login has not been defined):
+  
+app/controllers/auth_controller.rb:2:in `<class:AuthController>'
+app/controllers/auth_controller.rb:1:in `<main>'
+Started GET "/user_is_authed" for ::1 at 2020-12-15 11:27:02 -0500
+Processing by AuthController#user_is_authed as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 852)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:25:in `session_user'
+app/controllers/application_controller.rb:35:in `logged_in?'
+app/controllers/application_controller.rb:39:in `require_login'
+Started GET "/auto_login" for ::1 at 2020-12-15 11:29:00 -0500
+Processing by AuthController#auto_login as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 847)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:25:in `session_user'
+app/controllers/auth_controller.rb:15:in `auto_login'
+Started GET "/auto_login" for ::1 at 2020-12-15 11:43:27 -0500
+Processing by AuthController#auto_login as */*
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 576)
+
+
+Started GET "/user_is_authed" for ::1 at 2020-12-15 11:43:43 -0500
+Processing by AuthController#user_is_authed as */*
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 573)
+
+
+Started GET "/auto_login" for ::1 at 2020-12-15 11:44:45 -0500
+Processing by AuthController#auto_login as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 540)
+
+
+Started GET "/auto_login" for ::1 at 2020-12-15 11:48:29 -0500
+Processing by AuthController#auto_login as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 540)
+
+
+Started GET "/auto_login" for ::1 at 2020-12-15 11:53:14 -0500
+Processing by AuthController#auto_login as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 540)
+
+
+Started POST "/users" for ::1 at 2020-12-15 11:53:19 -0500
+Processing by UsersController#create as JSON
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 829)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:25:in `session_user'
+app/controllers/application_controller.rb:35:in `logged_in?'
+app/controllers/application_controller.rb:39:in `require_login'
+Started GET "/auto_login" for ::1 at 2020-12-15 11:55:29 -0500
+Processing by AuthController#auto_login as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 540)
+
+
+Started POST "/users" for ::1 at 2020-12-15 11:55:34 -0500
+Processing by UsersController#create as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 852)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:25:in `session_user'
+app/controllers/application_controller.rb:35:in `logged_in?'
+app/controllers/application_controller.rb:39:in `require_login'
+Started POST "/users" for ::1 at 2020-12-15 11:56:23 -0500
+Processing by UsersController#create as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 852)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:25:in `session_user'
+app/controllers/application_controller.rb:35:in `logged_in?'
+app/controllers/application_controller.rb:39:in `require_login'
+Started POST "/users" for ::1 at 2020-12-15 11:57:36 -0500
+Processing by UsersController#create as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 852)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:25:in `session_user'
+app/controllers/application_controller.rb:35:in `logged_in?'
+app/controllers/application_controller.rb:39:in `require_login'
+Started GET "/users" for ::1 at 2020-12-15 12:18:35 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.89ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3018)
+
+
+Started POST "/users" for ::1 at 2020-12-15 12:37:51 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Reid Watson", "email"=>"j.watsonreid@gmail.com", "username"=>"Reid", "password"=>"[FILTERED]", "user"=>{"name"=>"Reid Watson", "username"=>"Reid", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.7ms | ActiveRecord: 23.7ms | Allocations: 260)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-12-15 14:22:45 -0500
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Johnny Walker", "email"=>"", "username"=>"jw", "password"=>"[FILTERED]", "user"=>{"name"=>"Johnny Walker", "username"=>"jw", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.9ms | ActiveRecord: 3.2ms | Allocations: 2924)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:22:45 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (23.1ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.6ms)
+Completed 200 OK in 89ms (Views: 56.4ms | ActiveRecord: 27.3ms | Allocations: 32231)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:24:04 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.6ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.22ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.6ms | Allocations: 20800)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:24:11 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.8ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.18ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.8ms | Allocations: 20800)
+
+
+Started POST "/users" for ::1 at 2020-12-15 14:24:32 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Johnny Walker", "username"=>"jw", "password"=>"[FILTERED]", "user"=>{"name"=>"Johnny Walker", "username"=>"jw", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 259)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:24:32 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (2.1ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.61ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 2.1ms | Allocations: 20798)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:30:46 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (1.3ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (44.05ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 1.3ms | Allocations: 20879)
+
+
+Started POST "/users" for ::1 at 2020-12-15 14:31:14 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"r", "username"=>"2", "password"=>"[FILTERED]", "user"=>{"name"=>"r", "username"=>"2", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:31:14 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.4ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.76ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.4ms | Allocations: 20783)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:31:59 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.5ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.0ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.5ms | Allocations: 20783)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:32:00 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.9ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.62ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.9ms | Allocations: 20783)
+
+
+Started POST "/users" for ::1 at 2020-12-15 14:32:17 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"hello", "username"=>"h", "password"=>"[FILTERED]", "user"=>{"name"=>"hello", "username"=>"h", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:32:17 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.4ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.24ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.4ms | Allocations: 20783)
+
+
+Started POST "/users" for ::1 at 2020-12-15 14:34:30 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"1", "username"=>"1", "password"=>"[FILTERED]", "user"=>{"name"=>"1", "username"=>"1", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 1.0ms | ActiveRecord: 4.5ms | Allocations: 2579)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:34:30 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.7ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.92ms)
+Completed 200 OK in 37ms (Views: 28.1ms | ActiveRecord: 4.7ms | Allocations: 28779)
+
+
+Started POST "/users" for ::1 at 2020-12-15 14:36:40 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"John", "username"=>"j", "password"=>"[FILTERED]", "user"=>{"username"=>"j", "password"=>"[FILTERED]", "name"=>"John"}}
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 2.8ms | Allocations: 10163)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007f82e26692e0>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2020-12-15 14:39:52 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"XMAS", "username"=>"Reid", "password"=>"[FILTERED]", "user"=>{"username"=>"Reid", "password"=>"[FILTERED]", "name"=>"XMAS"}}
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 4.4ms | Allocations: 10151)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007f82e26b2198>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2020-12-15 14:42:03 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"XMAS", "username"=>"Reid", "password"=>"[FILTERED]", "user"=>{"username"=>"Reid", "password"=>"[FILTERED]", "name"=>"XMAS"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Reid"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (9.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "XMAS"], ["username", "Reid"], ["password", "123"], ["created_at", "2020-12-15 19:42:03.464318"], ["updated_at", "2020-12-15 19:42:03.464318"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "Reid"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers]   [1m[36mUserClimb Load (1.4ms)[0m  [1m[34mSELECT "user_climbs".* FROM "user_climbs" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers]   [1m[36mClimb Load (3.5ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs" INNER JOIN "user_climbs" ON "climbs"."id" = "user_climbs"."climb_id" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (52.3ms)
+Completed 201 Created in 171ms (Views: 47.4ms | ActiveRecord: 47.4ms | Allocations: 30626)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:42:03 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.8ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.55ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.8ms | Allocations: 27451)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-12-15 14:47:44 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Johnny Walker", "username"=>"jw", "password"=>"[FILTERED]", "user"=>{"username"=>"jw", "password"=>"[FILTERED]", "name"=>"Johnny Walker"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "jw"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Johnny Walker"], ["username", "jw"], ["password", "123"], ["created_at", "2020-12-15 19:47:44.427963"], ["updated_at", "2020-12-15 19:47:44.427963"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "jw"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers]   [1m[36mUserClimb Load (0.3ms)[0m  [1m[34mSELECT "user_climbs".* FROM "user_climbs" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers]   [1m[36mClimb Load (0.6ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs" INNER JOIN "user_climbs" ON "climbs"."id" = "user_climbs"."climb_id" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (30.78ms)
+Completed 201 Created in 79ms (Views: 28.5ms | ActiveRecord: 14.0ms | Allocations: 29675)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 14:47:44 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (1.1ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.48ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 1.1ms | Allocations: 27652)
+
+
+Started POST "/login" for ::1 at 2020-12-15 14:47:56 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"jw", "password"=>"[FILTERED]", "user"=>{"username"=>"jw", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jw"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms | Allocations: 3058)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007fc7d7aad588>):
+  
+app/controllers/auth_controller.rb:12:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/login" for ::1 at 2020-12-15 14:52:19 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"jw", "password"=>"[FILTERED]", "user"=>{"username"=>"jw", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jw"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 5.6ms | Allocations: 10295)
+
+
+  
+NoMethodError (undefined method `first' for #<User:0x00007fc7d86f8f40>):
+  
+app/controllers/auth_controller.rb:10:in `create'
+Started POST "/login" for ::1 at 2020-12-15 14:53:39 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"jw", "password"=>"[FILTERED]", "user"=>{"username"=>"jw", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jw"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 4.3ms | Allocations: 10195)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007fc7d7bb6380>):
+  
+app/controllers/auth_controller.rb:12:in `create'
+Started POST "/login" for ::1 at 2020-12-15 14:55:11 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"jw", "password"=>"[FILTERED]", "user"=>{"username"=>"jw", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jw"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.9ms | Allocations: 11408)
+
+
+  
+NoMethodError (undefined method `password_digest' for #<User:0x00007fc7d884f240>
+Did you mean?  password):
+  
+app/controllers/auth_controller.rb:12:in `create'
+Started POST "/users" for ::1 at 2020-12-15 14:58:47 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"lkjl", "username"=>"kn", "password"=>"[FILTERED]", "user"=>{"username"=>"kn", "password"=>"[FILTERED]", "name"=>"lkjl"}}
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.0ms | Allocations: 2711)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fc7d89850b0>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8570.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ascent_backend_development"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (89.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ascent_backend_development"[0m
+  [1m[35m (52.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ascent_backend_test"[0m
+  [1m[35m (263.7ms)[0m  [1m[35mCREATE DATABASE "ascent_backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (183.2ms)[0m  [1m[35mCREATE DATABASE "ascent_backend_test" ENCODING = 'unicode'[0m
+  [1m[35m (20.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1469868147962569005)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20201211185638)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "username" character varying, "password" character varying, "state" character varying, "bio" character varying, "interests" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201211185638"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserClimbs (20201211185734)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.1ms)[0m  [1m[35mCREATE TABLE "user_climbs" ("id" bigserial primary key, "user_id" integer, "climb_id" integer, "completed" boolean, "favorite" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201211185734"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateClimbs (20201211185817)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "climbs" ("id" bigserial primary key, "name" character varying, "climb_type" character varying, "difficulty" character varying, "rating" float, "state" character varying, "climbing_area" character varying, "image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (25.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201211185817"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (24.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-15 20:02:56.299111"], ["updated_at", "2020-12-15 20:02:56.299111"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1469868147962569005)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mClimb Load (13.8ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  [1m[36mUserClimb Load (0.5ms)[0m  [1m[34mSELECT "user_climbs".* FROM "user_climbs"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mClimb Load (17.4ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  [1m[36mUserClimb Load (0.9ms)[0m  [1m[34mSELECT "user_climbs".* FROM "user_climbs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (1.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "High Exposure"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105994360_medium_1558388432.jpg"], ["created_at", "2020-12-15 20:03:54.732585"], ["updated_at", "2020-12-15 20:03:54.732585"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bonnie's Roof"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105801789_medium_1557857429.jpg"], ["created_at", "2020-12-15 20:03:54.742304"], ["updated_at", "2020-12-15 20:03:54.742304"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (18.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.9ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Cascading Crystal Kaleidoscope (CCK)"], ["climb_type", "Trad"], ["difficulty", "5.8 PG13"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111679662_medium_1494299746.jpg"], ["created_at", "2020-12-15 20:03:54.747796"], ["updated_at", "2020-12-15 20:03:54.747796"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.8ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Fat City Direct"], ["climb_type", "Trad"], ["difficulty", "5.10d PG13"], ["rating", 4.9], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105799393_medium_1557857147.jpg"], ["created_at", "2020-12-15 20:03:54.776071"], ["updated_at", "2020-12-15 20:03:54.776071"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ridicullissima"], ["climb_type", "Trad"], ["difficulty", "5.10c/d PG13"], ["rating", 4.9], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/110867921_medium_1494356300.jpg"], ["created_at", "2020-12-15 20:03:54.784648"], ["updated_at", "2020-12-15 20:03:54.784648"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Son of Easy O"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105997687_medium_1558389019.jpg"], ["created_at", "2020-12-15 20:03:54.793030"], ["updated_at", "2020-12-15 20:03:54.793030"]]
+  [1m[35m (20.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Madame Grunnebaum's Wulst"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112138933_medium_1494323286.jpg"], ["created_at", "2020-12-15 20:03:54.820823"], ["updated_at", "2020-12-15 20:03:54.820823"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Directississima"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/110751286_medium_1494353045.jpg"], ["created_at", "2020-12-15 20:03:54.829024"], ["updated_at", "2020-12-15 20:03:54.829024"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Welcome to the Gunks"], ["climb_type", "Trad"], ["difficulty", "5.10b PG13"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112525632_medium_1494310530.jpg"], ["created_at", "2020-12-15 20:03:54.836291"], ["updated_at", "2020-12-15 20:03:54.836291"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (19.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "CCK Direct"], ["climb_type", "Trad"], ["difficulty", "5.9 PG13"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106886503_medium_1494148499.jpg"], ["created_at", "2020-12-15 20:03:54.845390"], ["updated_at", "2020-12-15 20:03:54.845390"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Ceiling"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106638105_medium_1494127737.jpg"], ["created_at", "2020-12-15 20:03:54.874909"], ["updated_at", "2020-12-15 20:03:54.874909"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Modern Times"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/113944140_medium_1513782885.jpg"], ["created_at", "2020-12-15 20:03:54.882999"], ["updated_at", "2020-12-15 20:03:54.882999"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Directissima"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106582123_medium_1494122452.jpg"], ["created_at", "2020-12-15 20:03:54.889853"], ["updated_at", "2020-12-15 20:03:54.889853"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (18.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.8ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Erect Direction"], ["climb_type", "Trad"], ["difficulty", "5.10c"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107556664_medium_1494196937.jpg"], ["created_at", "2020-12-15 20:03:54.898040"], ["updated_at", "2020-12-15 20:03:54.898040"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Graveyard Shift"], ["climb_type", "Trad"], ["difficulty", "5.10d PG13"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/113919294_medium_1512939215.jpg"], ["created_at", "2020-12-15 20:03:54.927217"], ["updated_at", "2020-12-15 20:03:54.927217"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "10,000 Restless Virgins"], ["climb_type", "Trad"], ["difficulty", "5.10d"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114777111_medium_1532522331.jpg"], ["created_at", "2020-12-15 20:03:54.935039"], ["updated_at", "2020-12-15 20:03:54.935039"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (21.1ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carbs and Caffeine"], ["climb_type", "Trad"], ["difficulty", "5.11a"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111952092_medium_1494313258.jpg"], ["created_at", "2020-12-15 20:03:54.943356"], ["updated_at", "2020-12-15 20:03:54.943356"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Green Monster"], ["climb_type", "Trad, TR"], ["difficulty", "5.9"], ["rating", 4.7], ["state", "Utah"], ["climbing_area", "Wasatch Range"], ["image", "https://cdn2.apstatic.com/photos/climb/110437613_medium_1494350591.jpg"], ["created_at", "2020-12-15 20:03:54.974797"], ["updated_at", "2020-12-15 20:03:54.974797"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Golden Dream"], ["climb_type", "Trad, TR"], ["difficulty", "5.9"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/116724759_medium_1555066883.jpg"], ["created_at", "2020-12-15 20:03:54.982922"], ["updated_at", "2020-12-15 20:03:54.982922"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ants' Line"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106526612_medium_1494117217.jpg"], ["created_at", "2020-12-15 20:03:54.990364"], ["updated_at", "2020-12-15 20:03:54.990364"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (19.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.9ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Feast of Fools"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105815213_medium_1557859074.jpg"], ["created_at", "2020-12-15 20:03:54.996817"], ["updated_at", "2020-12-15 20:03:54.996817"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Gelsa"], ["climb_type", "Trad"], ["difficulty", "5.4"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106510346_medium_1494115760.jpg"], ["created_at", "2020-12-15 20:03:55.026248"], ["updated_at", "2020-12-15 20:03:55.026248"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Yellow Ridge"], ["climb_type", "Trad"], ["difficulty", "5.7"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105816605_medium_1557859262.jpg"], ["created_at", "2020-12-15 20:03:55.033315"], ["updated_at", "2020-12-15 20:03:55.033315"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.8ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "MF"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105848896_medium_1557863128.jpg"], ["created_at", "2020-12-15 20:03:55.041239"], ["updated_at", "2020-12-15 20:03:55.041239"]]
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Falled on Account of Strain"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107159954_medium_1494170231.jpg"], ["created_at", "2020-12-15 20:03:55.070952"], ["updated_at", "2020-12-15 20:03:55.070952"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bird Cage"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109092010_medium_1494338558.jpg"], ["created_at", "2020-12-15 20:03:55.079043"], ["updated_at", "2020-12-15 20:03:55.079043"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Double Crack"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109589961_medium_1494357413.jpg"], ["created_at", "2020-12-15 20:03:55.085557"], ["updated_at", "2020-12-15 20:03:55.085557"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Buddha"], ["climb_type", "Boulder"], ["difficulty", "V7-"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111453776_medium_1494362798.jpg"], ["created_at", "2020-12-15 20:03:55.091260"], ["updated_at", "2020-12-15 20:03:55.091260"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (19.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Horseman"], ["climb_type", "Trad"], ["difficulty", "5.5"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106342464_medium_1494099719.jpg"], ["created_at", "2020-12-15 20:03:55.096728"], ["updated_at", "2020-12-15 20:03:55.096728"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Andrew Boulder Problem"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111453787_medium_1494362799.jpg"], ["created_at", "2020-12-15 20:03:55.121920"], ["updated_at", "2020-12-15 20:03:55.121920"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Coexistence"], ["climb_type", "Trad"], ["difficulty", "5.10d"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109092002_medium_1494338554.jpg"], ["created_at", "2020-12-15 20:03:55.127230"], ["updated_at", "2020-12-15 20:03:55.127230"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Pegasus"], ["climb_type", "Trad, TR"], ["difficulty", "5.8"], ["rating", 4.6], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/108907897_medium_1494299314.jpg"], ["created_at", "2020-12-15 20:03:55.132681"], ["updated_at", "2020-12-15 20:03:55.132681"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Stirrup Trouble"], ["climb_type", "Trad"], ["difficulty", "5.10b PG13"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/119867104_medium_1604620571.jpg"], ["created_at", "2020-12-15 20:03:55.138095"], ["updated_at", "2020-12-15 20:03:55.138095"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Le Teton"], ["climb_type", "Trad"], ["difficulty", "5.9+"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106839145_medium_1494144604.jpg"], ["created_at", "2020-12-15 20:03:55.143763"], ["updated_at", "2020-12-15 20:03:55.143763"]]
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Something Interesting"], ["climb_type", "Trad"], ["difficulty", "5.7+"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109211600_medium_1494341852.jpg"], ["created_at", "2020-12-15 20:03:55.170850"], ["updated_at", "2020-12-15 20:03:55.170850"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Quiet Buddhist"], ["climb_type", "Boulder"], ["difficulty", "V3"], ["rating", 4.6], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/108403756_medium_1494281177.jpg"], ["created_at", "2020-12-15 20:03:55.178839"], ["updated_at", "2020-12-15 20:03:55.178839"]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.8ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Unconquerable Crack"], ["climb_type", "Trad"], ["difficulty", "5.9+"], ["rating", 4.6], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/109329980_medium_1494346799.jpg"], ["created_at", "2020-12-15 20:03:55.219354"], ["updated_at", "2020-12-15 20:03:55.219354"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Birdland"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107080239_medium_1494164324.jpg"], ["created_at", "2020-12-15 20:03:55.225576"], ["updated_at", "2020-12-15 20:03:55.225576"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Arrow"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106829299_medium_1494143889.jpg"], ["created_at", "2020-12-15 20:03:55.230732"], ["updated_at", "2020-12-15 20:03:55.230732"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Teeny Face"], ["climb_type", "Trad"], ["difficulty", "5.10a"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111140375_medium_1494341126.jpg"], ["created_at", "2020-12-15 20:03:55.236337"], ["updated_at", "2020-12-15 20:03:55.236337"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Face to Face"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106922642_medium_1494151331.jpg"], ["created_at", "2020-12-15 20:03:55.242175"], ["updated_at", "2020-12-15 20:03:55.242175"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (19.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.9ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Loadies Zen"], ["climb_type", "Boulder"], ["difficulty", "V6+"], ["rating", 4.5], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/113489707_medium_1503272081.jpg"], ["created_at", "2020-12-15 20:03:55.247575"], ["updated_at", "2020-12-15 20:03:55.247575"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Keep on Struttin'"], ["climb_type", "Trad"], ["difficulty", "5.9+"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107888040_medium_1494248586.jpg"], ["created_at", "2020-12-15 20:03:55.276432"], ["updated_at", "2020-12-15 20:03:55.276432"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (1.2ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Transcontinental Nailway"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/108853701_medium_1494298032.jpg"], ["created_at", "2020-12-15 20:03:55.284022"], ["updated_at", "2020-12-15 20:03:55.284022"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Autumn Arch"], ["climb_type", "Sport"], ["difficulty", "5.10b"], ["rating", 4.5], ["state", "Pennsylvania"], ["climbing_area", "South Central PA"], ["image", "https://cdn2.apstatic.com/photos/climb/107586953_medium_1494198683.jpg"], ["created_at", "2020-12-15 20:03:55.292057"], ["updated_at", "2020-12-15 20:03:55.292057"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (19.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.8ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Nosedive"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105799448_medium_1557857171.jpg"], ["created_at", "2020-12-15 20:03:55.297225"], ["updated_at", "2020-12-15 20:03:55.297225"]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Never Never Land"], ["climb_type", "Trad"], ["difficulty", "5.10a"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111663309_medium_1494298988.jpg"], ["created_at", "2020-12-15 20:03:55.329738"], ["updated_at", "2020-12-15 20:03:55.329738"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Sting"], ["climb_type", "Trad"], ["difficulty", "5.11d"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112864029_medium_1494319247.jpg"], ["created_at", "2020-12-15 20:03:55.338225"], ["updated_at", "2020-12-15 20:03:55.338225"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (19.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Gill Egg (AKA Gill's Route)"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112037634_medium_1494317665.jpg"], ["created_at", "2020-12-15 20:03:55.345511"], ["updated_at", "2020-12-15 20:03:55.345511"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Strictly From Nowhere"], ["climb_type", "Trad"], ["difficulty", "5.7"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109211593_medium_1494341850.jpg"], ["created_at", "2020-12-15 20:03:55.374407"], ["updated_at", "2020-12-15 20:03:55.374407"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Dangler"], ["climb_type", "Trad"], ["difficulty", "5.10a"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106334408_medium_1494098888.jpg"], ["created_at", "2020-12-15 20:03:55.381782"], ["updated_at", "2020-12-15 20:03:55.381782"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Simple Suff"], ["climb_type", "Trad"], ["difficulty", "5.10a/b"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106745592_medium_1494137386.jpg"], ["created_at", "2020-12-15 20:03:55.389156"], ["updated_at", "2020-12-15 20:03:55.389156"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (20.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.8ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Wegetables I've Never Seen Before"], ["climb_type", "Trad"], ["difficulty", "5.10a"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106730218_medium_1494135900.jpg"], ["created_at", "2020-12-15 20:03:55.396057"], ["updated_at", "2020-12-15 20:03:55.396057"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Annie Oh!"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/113714942_medium_1508193321.jpg"], ["created_at", "2020-12-15 20:03:55.425655"], ["updated_at", "2020-12-15 20:03:55.425655"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Limelight"], ["climb_type", "Trad"], ["difficulty", "5.7"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106510349_medium_1494115762.jpg"], ["created_at", "2020-12-15 20:03:55.432700"], ["updated_at", "2020-12-15 20:03:55.432700"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Wave"], ["climb_type", "Boulder"], ["difficulty", "V2"], ["rating", 4.3], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/113648553_medium_1506831775.jpg"], ["created_at", "2020-12-15 20:03:55.439238"], ["updated_at", "2020-12-15 20:03:55.439238"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (20.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Double Helix (aka Rikert's Corner)"], ["climb_type", "Trad, TR"], ["difficulty", "5.9"], ["rating", 4.4], ["state", "Massachusetts"], ["climbing_area", "Western MA"], ["image", "https://cdn2.apstatic.com/photos/climb/119073458_medium_1592658183.jpg"], ["created_at", "2020-12-15 20:03:55.445229"], ["updated_at", "2020-12-15 20:03:55.445229"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mother's Day Party"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", ""], ["created_at", "2020-12-15 20:03:55.471302"], ["updated_at", "2020-12-15 20:03:55.471302"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Apoplexy"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114796689_medium_1533047103.jpg"], ["created_at", "2020-12-15 20:03:55.476638"], ["updated_at", "2020-12-15 20:03:55.476638"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Star Action"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/119960195_medium_1606096861.jpg"], ["created_at", "2020-12-15 20:03:55.481955"], ["updated_at", "2020-12-15 20:03:55.481955"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Pond Cave Traverse"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.3], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/111598813_medium_1494296504.jpg"], ["created_at", "2020-12-15 20:03:55.487300"], ["updated_at", "2020-12-15 20:03:55.487300"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Peace Dove"], ["climb_type", "Boulder"], ["difficulty", "V3"], ["rating", 4.3], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/117356517_medium_1563138252.jpg"], ["created_at", "2020-12-15 20:03:55.492851"], ["updated_at", "2020-12-15 20:03:55.492851"]]
+  [1m[35m (20.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Roseland"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105848907_medium_1557863133.jpg"], ["created_at", "2020-12-15 20:03:55.519939"], ["updated_at", "2020-12-15 20:03:55.519939"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Alphonse"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/108309883_medium_1494275328.jpg"], ["created_at", "2020-12-15 20:03:55.527703"], ["updated_at", "2020-12-15 20:03:55.527703"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "YMC Route"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.3], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/107960481_medium_1494253713.jpg"], ["created_at", "2020-12-15 20:03:55.534033"], ["updated_at", "2020-12-15 20:03:55.534033"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Three Doves"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/117664507_medium_1567174380.jpg"], ["created_at", "2020-12-15 20:03:55.540325"], ["updated_at", "2020-12-15 20:03:55.540325"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (13.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.8ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Birdie Party"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114501092_medium_1529445770.jpg"], ["created_at", "2020-12-15 20:03:55.547282"], ["updated_at", "2020-12-15 20:03:55.547282"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Winter"], ["climb_type", "Trad"], ["difficulty", "5.10+"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114310966_medium_1525006915.jpg"], ["created_at", "2020-12-15 20:03:55.569546"], ["updated_at", "2020-12-15 20:03:55.569546"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Intertwine"], ["climb_type", "Trad, TR"], ["difficulty", "5.8"], ["rating", 4.2], ["state", "Massachusetts"], ["climbing_area", "Central, MA"], ["image", "https://cdn2.apstatic.com/photos/climb/105907251_medium_1557940412.jpg"], ["created_at", "2020-12-15 20:03:55.577601"], ["updated_at", "2020-12-15 20:03:55.577601"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Moonlight"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106223869_medium_1494089560.jpg"], ["created_at", "2020-12-15 20:03:55.584354"], ["updated_at", "2020-12-15 20:03:55.584354"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Black Boulder Problem"], ["climb_type", "Boulder"], ["difficulty", "V5"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112037633_medium_1494317664.jpg"], ["created_at", "2020-12-15 20:03:55.591569"], ["updated_at", "2020-12-15 20:03:55.591569"]]
+  [1m[35m (14.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Disneyland"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114329957_medium_1525426046.jpg"], ["created_at", "2020-12-15 20:03:55.613647"], ["updated_at", "2020-12-15 20:03:55.613647"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Psycho Crack Right"], ["climb_type", "Trad, TR"], ["difficulty", "5.8"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/110765175_medium_1494353473.jpg"], ["created_at", "2020-12-15 20:03:55.621188"], ["updated_at", "2020-12-15 20:03:55.621188"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Beginner's Delight"], ["climb_type", "Trad"], ["difficulty", "5.4"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107026532_medium_1494160011.jpg"], ["created_at", "2020-12-15 20:03:55.627977"], ["updated_at", "2020-12-15 20:03:55.627977"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Heart of Glass"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.4], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/107972992_medium_1494254498.jpg"], ["created_at", "2020-12-15 20:03:55.633132"], ["updated_at", "2020-12-15 20:03:55.633132"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miss Bailey"], ["climb_type", "Trad"], ["difficulty", "5.6 PG13"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/117676838_medium_1567378188.jpg"], ["created_at", "2020-12-15 20:03:55.638318"], ["updated_at", "2020-12-15 20:03:55.638318"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Frog's Head"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106052814_medium_1558468254.jpg"], ["created_at", "2020-12-15 20:03:55.643625"], ["updated_at", "2020-12-15 20:03:55.643625"]]
+  [1m[35m (14.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "V-3"], ["climb_type", "Trad"], ["difficulty", "5.7"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105998952_medium_1558389167.jpg"], ["created_at", "2020-12-15 20:03:55.664410"], ["updated_at", "2020-12-15 20:03:55.664410"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (14.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Maria"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/110486935_medium_1494351758.jpg"], ["created_at", "2020-12-15 20:03:55.694531"], ["updated_at", "2020-12-15 20:03:55.694531"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Iron Cross"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.2], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/117554904_medium_1565062610.jpg"], ["created_at", "2020-12-15 20:03:55.717122"], ["updated_at", "2020-12-15 20:03:55.717122"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Three Pines"], ["climb_type", "Trad"], ["difficulty", "5.3"], ["rating", 4.0], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107865712_medium_1494247199.jpg"], ["created_at", "2020-12-15 20:03:55.724407"], ["updated_at", "2020-12-15 20:03:55.724407"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Thin Slabs / Thin Slabs Direct"], ["climb_type", "Trad"], ["difficulty", "5.7+"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106753216_medium_1494138003.jpg"], ["created_at", "2020-12-15 20:03:55.730562"], ["updated_at", "2020-12-15 20:03:55.730562"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Cro-Magnon"], ["climb_type", "Trad, TR"], ["difficulty", "5.10"], ["rating", 4.7], ["state", "Massachusetts"], ["climbing_area", "Central, MA"], ["image", "https://cdn2.apstatic.com/photos/climb/110755514_medium_1494353158.jpg"], ["created_at", "2020-12-15 20:03:55.736277"], ["updated_at", "2020-12-15 20:03:55.736277"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Insuhlation"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/108451651_medium_1494283770.jpg"], ["created_at", "2020-12-15 20:03:55.741771"], ["updated_at", "2020-12-15 20:03:55.741771"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (13.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Yum Yum Yab Yum"], ["climb_type", "Trad"], ["difficulty", "5.4"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111685488_medium_1494299938.jpg"], ["created_at", "2020-12-15 20:03:55.747115"], ["updated_at", "2020-12-15 20:03:55.747115"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jackie"], ["climb_type", "Trad"], ["difficulty", "5.5"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/113892534_medium_1512181915.jpg"], ["created_at", "2020-12-15 20:03:55.765684"], ["updated_at", "2020-12-15 20:03:55.765684"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Broadway"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.1], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/112194226_medium_1494326133.jpg"], ["created_at", "2020-12-15 20:03:55.770863"], ["updated_at", "2020-12-15 20:03:55.770863"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Lorax"], ["climb_type", "Boulder"], ["difficulty", "V3+"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112037635_medium_1494317666.jpg"], ["created_at", "2020-12-15 20:03:55.778332"], ["updated_at", "2020-12-15 20:03:55.778332"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sit Down Traverse"], ["climb_type", "Boulder"], ["difficulty", "V5"], ["rating", 4.1], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/106841479_medium_1494144816.jpg"], ["created_at", "2020-12-15 20:03:55.783505"], ["updated_at", "2020-12-15 20:03:55.783505"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Higher Stannard"], ["climb_type", "Trad"], ["difficulty", "5.9-"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106147986_medium_1559059124.jpg"], ["created_at", "2020-12-15 20:03:55.788473"], ["updated_at", "2020-12-15 20:03:55.788473"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carey Corner"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.1], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/106378037_medium_1494103107.jpg"], ["created_at", "2020-12-15 20:03:55.793914"], ["updated_at", "2020-12-15 20:03:55.793914"]]
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Snooky's Return"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106177217_medium_1494085678.jpg"], ["created_at", "2020-12-15 20:03:55.812379"], ["updated_at", "2020-12-15 20:03:55.812379"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Broken Sling"], ["climb_type", "Trad"], ["difficulty", "5.8+ PG13"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/108969906_medium_1494301770.jpg"], ["created_at", "2020-12-15 20:03:55.817704"], ["updated_at", "2020-12-15 20:03:55.817704"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hydroman"], ["climb_type", "Sport"], ["difficulty", "5.11a"], ["rating", 4.4], ["state", "Pennsylvania"], ["climbing_area", "South Central PA"], ["image", "https://cdn2.apstatic.com/photos/climb/117691387_medium_1567538102.jpg"], ["created_at", "2020-12-15 20:03:55.822922"], ["updated_at", "2020-12-15 20:03:55.822922"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Cowboy"], ["climb_type", "Trad"], ["difficulty", "5.5"], ["rating", 4.1], ["state", "Idaho"], ["climbing_area", "South Idaho"], ["image", "https://cdn2.apstatic.com/photos/climb/109255478_medium_1494343194.jpg"], ["created_at", "2020-12-15 20:03:55.828266"], ["updated_at", "2020-12-15 20:03:55.828266"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Vector"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.1], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/105800580_medium_1557857310.jpg"], ["created_at", "2020-12-15 20:03:55.833415"], ["updated_at", "2020-12-15 20:03:55.833415"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Absurdland"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.0], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106208347_medium_1494088101.jpg"], ["created_at", "2020-12-15 20:03:55.839107"], ["updated_at", "2020-12-15 20:03:55.839107"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (13.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Grand Central"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109228511_medium_1494342386.jpg"], ["created_at", "2020-12-15 20:03:55.845111"], ["updated_at", "2020-12-15 20:03:55.845111"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mental As Anything"], ["climb_type", "Sport"], ["difficulty", "5.9+"], ["rating", 4.0], ["state", "Pennsylvania"], ["climbing_area", "South Central PA"], ["image", "https://cdn2.apstatic.com/photos/climb/117810041_medium_1569804624.jpg"], ["created_at", "2020-12-15 20:03:55.863616"], ["updated_at", "2020-12-15 20:03:55.863616"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Baby"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.0], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106811289_medium_1494142556.jpg"], ["created_at", "2020-12-15 20:03:55.867828"], ["updated_at", "2020-12-15 20:03:55.867828"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Retribution"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.0], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106058848_medium_1558469049.jpg"], ["created_at", "2020-12-15 20:03:55.872072"], ["updated_at", "2020-12-15 20:03:55.872072"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/users" for ::1 at 2020-12-15 15:04:48 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"XMAS", "username"=>"Reid", "password"=>"[FILTERED]", "user"=>{"username"=>"Reid", "password"=>"[FILTERED]", "name"=>"XMAS"}}
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 11.5ms | Allocations: 10947)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fae8ef6dcd8>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (57.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ascent_backend_development"[0m
+  [1m[35m (54.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ascent_backend_test"[0m
+  [1m[35m (191.9ms)[0m  [1m[35mCREATE DATABASE "ascent_backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (91.4ms)[0m  [1m[35mCREATE DATABASE "ascent_backend_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1469868147962569005)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20201211185638)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "username" character varying, "password_digest" character varying, "state" character varying, "bio" character varying, "interests" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201211185638"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserClimbs (20201211185734)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "user_climbs" ("id" bigserial primary key, "user_id" integer, "climb_id" integer, "completed" boolean, "favorite" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (11.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201211185734"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateClimbs (20201211185817)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "climbs" ("id" bigserial primary key, "name" character varying, "climb_type" character varying, "difficulty" character varying, "rating" float, "state" character varying, "climbing_area" character varying, "image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201211185817"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-15 20:06:44.720917"], ["updated_at", "2020-12-15 20:06:44.720917"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1469868147962569005)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mClimb Load (0.6ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  [1m[36mUserClimb Load (11.6ms)[0m  [1m[34mSELECT "user_climbs".* FROM "user_climbs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "High Exposure"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105994360_medium_1558388432.jpg"], ["created_at", "2020-12-15 20:06:44.909808"], ["updated_at", "2020-12-15 20:06:44.909808"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bonnie's Roof"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105801789_medium_1557857429.jpg"], ["created_at", "2020-12-15 20:06:44.913982"], ["updated_at", "2020-12-15 20:06:44.913982"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Cascading Crystal Kaleidoscope (CCK)"], ["climb_type", "Trad"], ["difficulty", "5.8 PG13"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111679662_medium_1494299746.jpg"], ["created_at", "2020-12-15 20:06:44.917177"], ["updated_at", "2020-12-15 20:06:44.917177"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Fat City Direct"], ["climb_type", "Trad"], ["difficulty", "5.10d PG13"], ["rating", 4.9], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105799393_medium_1557857147.jpg"], ["created_at", "2020-12-15 20:06:44.921009"], ["updated_at", "2020-12-15 20:06:44.921009"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ridicullissima"], ["climb_type", "Trad"], ["difficulty", "5.10c/d PG13"], ["rating", 4.9], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/110867921_medium_1494356300.jpg"], ["created_at", "2020-12-15 20:06:44.924551"], ["updated_at", "2020-12-15 20:06:44.924551"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Son of Easy O"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105997687_medium_1558389019.jpg"], ["created_at", "2020-12-15 20:06:44.927635"], ["updated_at", "2020-12-15 20:06:44.927635"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Madame Grunnebaum's Wulst"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112138933_medium_1494323286.jpg"], ["created_at", "2020-12-15 20:06:44.930919"], ["updated_at", "2020-12-15 20:06:44.930919"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Directississima"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/110751286_medium_1494353045.jpg"], ["created_at", "2020-12-15 20:06:44.933920"], ["updated_at", "2020-12-15 20:06:44.933920"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (10.9ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Welcome to the Gunks"], ["climb_type", "Trad"], ["difficulty", "5.10b PG13"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112525632_medium_1494310530.jpg"], ["created_at", "2020-12-15 20:06:44.937170"], ["updated_at", "2020-12-15 20:06:44.937170"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "CCK Direct"], ["climb_type", "Trad"], ["difficulty", "5.9 PG13"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106886503_medium_1494148499.jpg"], ["created_at", "2020-12-15 20:06:44.952050"], ["updated_at", "2020-12-15 20:06:44.952050"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Ceiling"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106638105_medium_1494127737.jpg"], ["created_at", "2020-12-15 20:06:44.955640"], ["updated_at", "2020-12-15 20:06:44.955640"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.2ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Modern Times"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/113944140_medium_1513782885.jpg"], ["created_at", "2020-12-15 20:06:44.959193"], ["updated_at", "2020-12-15 20:06:44.959193"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Directissima"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106582123_medium_1494122452.jpg"], ["created_at", "2020-12-15 20:06:44.962423"], ["updated_at", "2020-12-15 20:06:44.962423"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Erect Direction"], ["climb_type", "Trad"], ["difficulty", "5.10c"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107556664_medium_1494196937.jpg"], ["created_at", "2020-12-15 20:06:44.965817"], ["updated_at", "2020-12-15 20:06:44.965817"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Graveyard Shift"], ["climb_type", "Trad"], ["difficulty", "5.10d PG13"], ["rating", 4.8], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/113919294_medium_1512939215.jpg"], ["created_at", "2020-12-15 20:06:44.969574"], ["updated_at", "2020-12-15 20:06:44.969574"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "10,000 Restless Virgins"], ["climb_type", "Trad"], ["difficulty", "5.10d"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114777111_medium_1532522331.jpg"], ["created_at", "2020-12-15 20:06:44.972804"], ["updated_at", "2020-12-15 20:06:44.972804"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carbs and Caffeine"], ["climb_type", "Trad"], ["difficulty", "5.11a"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111952092_medium_1494313258.jpg"], ["created_at", "2020-12-15 20:06:44.975980"], ["updated_at", "2020-12-15 20:06:44.975980"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Green Monster"], ["climb_type", "Trad, TR"], ["difficulty", "5.9"], ["rating", 4.7], ["state", "Utah"], ["climbing_area", "Wasatch Range"], ["image", "https://cdn2.apstatic.com/photos/climb/110437613_medium_1494350591.jpg"], ["created_at", "2020-12-15 20:06:44.979241"], ["updated_at", "2020-12-15 20:06:44.979241"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Golden Dream"], ["climb_type", "Trad, TR"], ["difficulty", "5.9"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/116724759_medium_1555066883.jpg"], ["created_at", "2020-12-15 20:06:44.982561"], ["updated_at", "2020-12-15 20:06:44.982561"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ants' Line"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106526612_medium_1494117217.jpg"], ["created_at", "2020-12-15 20:06:44.986147"], ["updated_at", "2020-12-15 20:06:44.986147"]]
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Feast of Fools"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105815213_medium_1557859074.jpg"], ["created_at", "2020-12-15 20:06:45.000766"], ["updated_at", "2020-12-15 20:06:45.000766"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.2ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Gelsa"], ["climb_type", "Trad"], ["difficulty", "5.4"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106510346_medium_1494115760.jpg"], ["created_at", "2020-12-15 20:06:45.004536"], ["updated_at", "2020-12-15 20:06:45.004536"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Yellow Ridge"], ["climb_type", "Trad"], ["difficulty", "5.7"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105816605_medium_1557859262.jpg"], ["created_at", "2020-12-15 20:06:45.007803"], ["updated_at", "2020-12-15 20:06:45.007803"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "MF"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105848896_medium_1557863128.jpg"], ["created_at", "2020-12-15 20:06:45.011662"], ["updated_at", "2020-12-15 20:06:45.011662"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Falled on Account of Strain"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107159954_medium_1494170231.jpg"], ["created_at", "2020-12-15 20:06:45.015104"], ["updated_at", "2020-12-15 20:06:45.015104"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bird Cage"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109092010_medium_1494338558.jpg"], ["created_at", "2020-12-15 20:06:45.018528"], ["updated_at", "2020-12-15 20:06:45.018528"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Double Crack"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109589961_medium_1494357413.jpg"], ["created_at", "2020-12-15 20:06:45.021748"], ["updated_at", "2020-12-15 20:06:45.021748"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Buddha"], ["climb_type", "Boulder"], ["difficulty", "V7-"], ["rating", 4.7], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111453776_medium_1494362798.jpg"], ["created_at", "2020-12-15 20:06:45.025590"], ["updated_at", "2020-12-15 20:06:45.025590"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Horseman"], ["climb_type", "Trad"], ["difficulty", "5.5"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106342464_medium_1494099719.jpg"], ["created_at", "2020-12-15 20:06:45.028836"], ["updated_at", "2020-12-15 20:06:45.028836"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Andrew Boulder Problem"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111453787_medium_1494362799.jpg"], ["created_at", "2020-12-15 20:06:45.031950"], ["updated_at", "2020-12-15 20:06:45.031950"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.2ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Coexistence"], ["climb_type", "Trad"], ["difficulty", "5.10d"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109092002_medium_1494338554.jpg"], ["created_at", "2020-12-15 20:06:45.035215"], ["updated_at", "2020-12-15 20:06:45.035215"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (10.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.9ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Pegasus"], ["climb_type", "Trad, TR"], ["difficulty", "5.8"], ["rating", 4.6], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/108907897_medium_1494299314.jpg"], ["created_at", "2020-12-15 20:06:45.038332"], ["updated_at", "2020-12-15 20:06:45.038332"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Stirrup Trouble"], ["climb_type", "Trad"], ["difficulty", "5.10b PG13"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/119867104_medium_1604620571.jpg"], ["created_at", "2020-12-15 20:06:45.056094"], ["updated_at", "2020-12-15 20:06:45.056094"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Le Teton"], ["climb_type", "Trad"], ["difficulty", "5.9+"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106839145_medium_1494144604.jpg"], ["created_at", "2020-12-15 20:06:45.061137"], ["updated_at", "2020-12-15 20:06:45.061137"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Something Interesting"], ["climb_type", "Trad"], ["difficulty", "5.7+"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109211600_medium_1494341852.jpg"], ["created_at", "2020-12-15 20:06:45.066246"], ["updated_at", "2020-12-15 20:06:45.066246"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Quiet Buddhist"], ["climb_type", "Boulder"], ["difficulty", "V3"], ["rating", 4.6], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/108403756_medium_1494281177.jpg"], ["created_at", "2020-12-15 20:06:45.070518"], ["updated_at", "2020-12-15 20:06:45.070518"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Unconquerable Crack"], ["climb_type", "Trad"], ["difficulty", "5.9+"], ["rating", 4.6], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/109329980_medium_1494346799.jpg"], ["created_at", "2020-12-15 20:06:45.074740"], ["updated_at", "2020-12-15 20:06:45.074740"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Birdland"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107080239_medium_1494164324.jpg"], ["created_at", "2020-12-15 20:06:45.078881"], ["updated_at", "2020-12-15 20:06:45.078881"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Arrow"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106829299_medium_1494143889.jpg"], ["created_at", "2020-12-15 20:06:45.082581"], ["updated_at", "2020-12-15 20:06:45.082581"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (11.9ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Teeny Face"], ["climb_type", "Trad"], ["difficulty", "5.10a"], ["rating", 4.6], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111140375_medium_1494341126.jpg"], ["created_at", "2020-12-15 20:06:45.086221"], ["updated_at", "2020-12-15 20:06:45.086221"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.9ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Face to Face"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106922642_medium_1494151331.jpg"], ["created_at", "2020-12-15 20:06:45.103757"], ["updated_at", "2020-12-15 20:06:45.103757"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Loadies Zen"], ["climb_type", "Boulder"], ["difficulty", "V6+"], ["rating", 4.5], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/113489707_medium_1503272081.jpg"], ["created_at", "2020-12-15 20:06:45.129843"], ["updated_at", "2020-12-15 20:06:45.129843"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Keep on Struttin'"], ["climb_type", "Trad"], ["difficulty", "5.9+"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107888040_medium_1494248586.jpg"], ["created_at", "2020-12-15 20:06:45.135073"], ["updated_at", "2020-12-15 20:06:45.135073"]]
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (1.1ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Transcontinental Nailway"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/108853701_medium_1494298032.jpg"], ["created_at", "2020-12-15 20:06:45.150879"], ["updated_at", "2020-12-15 20:06:45.150879"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Autumn Arch"], ["climb_type", "Sport"], ["difficulty", "5.10b"], ["rating", 4.5], ["state", "Pennsylvania"], ["climbing_area", "South Central PA"], ["image", "https://cdn2.apstatic.com/photos/climb/107586953_medium_1494198683.jpg"], ["created_at", "2020-12-15 20:06:45.157582"], ["updated_at", "2020-12-15 20:06:45.157582"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Nosedive"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105799448_medium_1557857171.jpg"], ["created_at", "2020-12-15 20:06:45.164031"], ["updated_at", "2020-12-15 20:06:45.164031"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Never Never Land"], ["climb_type", "Trad"], ["difficulty", "5.10a"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111663309_medium_1494298988.jpg"], ["created_at", "2020-12-15 20:06:45.170466"], ["updated_at", "2020-12-15 20:06:45.170466"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Sting"], ["climb_type", "Trad"], ["difficulty", "5.11d"], ["rating", 4.5], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112864029_medium_1494319247.jpg"], ["created_at", "2020-12-15 20:06:45.178948"], ["updated_at", "2020-12-15 20:06:45.178948"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (12.2ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Gill Egg (AKA Gill's Route)"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112037634_medium_1494317665.jpg"], ["created_at", "2020-12-15 20:06:45.185584"], ["updated_at", "2020-12-15 20:06:45.185584"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Strictly From Nowhere"], ["climb_type", "Trad"], ["difficulty", "5.7"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109211593_medium_1494341850.jpg"], ["created_at", "2020-12-15 20:06:45.206667"], ["updated_at", "2020-12-15 20:06:45.206667"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Dangler"], ["climb_type", "Trad"], ["difficulty", "5.10a"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106334408_medium_1494098888.jpg"], ["created_at", "2020-12-15 20:06:45.214448"], ["updated_at", "2020-12-15 20:06:45.214448"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Simple Suff"], ["climb_type", "Trad"], ["difficulty", "5.10a/b"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106745592_medium_1494137386.jpg"], ["created_at", "2020-12-15 20:06:45.221396"], ["updated_at", "2020-12-15 20:06:45.221396"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Wegetables I've Never Seen Before"], ["climb_type", "Trad"], ["difficulty", "5.10a"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106730218_medium_1494135900.jpg"], ["created_at", "2020-12-15 20:06:45.228154"], ["updated_at", "2020-12-15 20:06:45.228154"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (11.2ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Annie Oh!"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/113714942_medium_1508193321.jpg"], ["created_at", "2020-12-15 20:06:45.235779"], ["updated_at", "2020-12-15 20:06:45.235779"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Limelight"], ["climb_type", "Trad"], ["difficulty", "5.7"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106510349_medium_1494115762.jpg"], ["created_at", "2020-12-15 20:06:45.253577"], ["updated_at", "2020-12-15 20:06:45.253577"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Wave"], ["climb_type", "Boulder"], ["difficulty", "V2"], ["rating", 4.3], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/113648553_medium_1506831775.jpg"], ["created_at", "2020-12-15 20:06:45.260388"], ["updated_at", "2020-12-15 20:06:45.260388"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Double Helix (aka Rikert's Corner)"], ["climb_type", "Trad, TR"], ["difficulty", "5.9"], ["rating", 4.4], ["state", "Massachusetts"], ["climbing_area", "Western MA"], ["image", "https://cdn2.apstatic.com/photos/climb/119073458_medium_1592658183.jpg"], ["created_at", "2020-12-15 20:06:45.267151"], ["updated_at", "2020-12-15 20:06:45.267151"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mother's Day Party"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", ""], ["created_at", "2020-12-15 20:06:45.272749"], ["updated_at", "2020-12-15 20:06:45.272749"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Apoplexy"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114796689_medium_1533047103.jpg"], ["created_at", "2020-12-15 20:06:45.277756"], ["updated_at", "2020-12-15 20:06:45.277756"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Star Action"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.4], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/119960195_medium_1606096861.jpg"], ["created_at", "2020-12-15 20:06:45.283059"], ["updated_at", "2020-12-15 20:06:45.283059"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (10.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Pond Cave Traverse"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.3], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/111598813_medium_1494296504.jpg"], ["created_at", "2020-12-15 20:06:45.288524"], ["updated_at", "2020-12-15 20:06:45.288524"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Peace Dove"], ["climb_type", "Boulder"], ["difficulty", "V3"], ["rating", 4.3], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/117356517_medium_1563138252.jpg"], ["created_at", "2020-12-15 20:06:45.305737"], ["updated_at", "2020-12-15 20:06:45.305737"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Roseland"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105848907_medium_1557863133.jpg"], ["created_at", "2020-12-15 20:06:45.312106"], ["updated_at", "2020-12-15 20:06:45.312106"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Alphonse"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/108309883_medium_1494275328.jpg"], ["created_at", "2020-12-15 20:06:45.317032"], ["updated_at", "2020-12-15 20:06:45.317032"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "YMC Route"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.3], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/107960481_medium_1494253713.jpg"], ["created_at", "2020-12-15 20:06:45.321967"], ["updated_at", "2020-12-15 20:06:45.321967"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Three Doves"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/117664507_medium_1567174380.jpg"], ["created_at", "2020-12-15 20:06:45.327265"], ["updated_at", "2020-12-15 20:06:45.327265"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Birdie Party"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114501092_medium_1529445770.jpg"], ["created_at", "2020-12-15 20:06:45.332596"], ["updated_at", "2020-12-15 20:06:45.332596"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (10.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Winter"], ["climb_type", "Trad"], ["difficulty", "5.10+"], ["rating", 4.3], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114310966_medium_1525006915.jpg"], ["created_at", "2020-12-15 20:06:45.338612"], ["updated_at", "2020-12-15 20:06:45.338612"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Intertwine"], ["climb_type", "Trad, TR"], ["difficulty", "5.8"], ["rating", 4.2], ["state", "Massachusetts"], ["climbing_area", "Central, MA"], ["image", "https://cdn2.apstatic.com/photos/climb/105907251_medium_1557940412.jpg"], ["created_at", "2020-12-15 20:06:45.355234"], ["updated_at", "2020-12-15 20:06:45.355234"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Moonlight"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106223869_medium_1494089560.jpg"], ["created_at", "2020-12-15 20:06:45.361563"], ["updated_at", "2020-12-15 20:06:45.361563"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Black Boulder Problem"], ["climb_type", "Boulder"], ["difficulty", "V5"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112037633_medium_1494317664.jpg"], ["created_at", "2020-12-15 20:06:45.367169"], ["updated_at", "2020-12-15 20:06:45.367169"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Disneyland"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/114329957_medium_1525426046.jpg"], ["created_at", "2020-12-15 20:06:45.372421"], ["updated_at", "2020-12-15 20:06:45.372421"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Psycho Crack Right"], ["climb_type", "Trad, TR"], ["difficulty", "5.8"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/110765175_medium_1494353473.jpg"], ["created_at", "2020-12-15 20:06:45.378963"], ["updated_at", "2020-12-15 20:06:45.378963"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Beginner's Delight"], ["climb_type", "Trad"], ["difficulty", "5.4"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107026532_medium_1494160011.jpg"], ["created_at", "2020-12-15 20:06:45.384211"], ["updated_at", "2020-12-15 20:06:45.384211"]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Heart of Glass"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.4], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/107972992_medium_1494254498.jpg"], ["created_at", "2020-12-15 20:06:45.401327"], ["updated_at", "2020-12-15 20:06:45.401327"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miss Bailey"], ["climb_type", "Trad"], ["difficulty", "5.6 PG13"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/117676838_medium_1567378188.jpg"], ["created_at", "2020-12-15 20:06:45.406717"], ["updated_at", "2020-12-15 20:06:45.406717"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Frog's Head"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106052814_medium_1558468254.jpg"], ["created_at", "2020-12-15 20:06:45.412152"], ["updated_at", "2020-12-15 20:06:45.412152"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "V-3"], ["climb_type", "Trad"], ["difficulty", "5.7"], ["rating", 4.2], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/105998952_medium_1558389167.jpg"], ["created_at", "2020-12-15 20:06:45.417273"], ["updated_at", "2020-12-15 20:06:45.417273"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Maria"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/110486935_medium_1494351758.jpg"], ["created_at", "2020-12-15 20:06:45.422118"], ["updated_at", "2020-12-15 20:06:45.422118"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.6ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Iron Cross"], ["climb_type", "Boulder"], ["difficulty", "V4"], ["rating", 4.2], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/117554904_medium_1565062610.jpg"], ["created_at", "2020-12-15 20:06:45.427808"], ["updated_at", "2020-12-15 20:06:45.427808"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (12.1ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Three Pines"], ["climb_type", "Trad"], ["difficulty", "5.3"], ["rating", 4.0], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/107865712_medium_1494247199.jpg"], ["created_at", "2020-12-15 20:06:45.435330"], ["updated_at", "2020-12-15 20:06:45.435330"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Thin Slabs / Thin Slabs Direct"], ["climb_type", "Trad"], ["difficulty", "5.7+"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106753216_medium_1494138003.jpg"], ["created_at", "2020-12-15 20:06:45.452861"], ["updated_at", "2020-12-15 20:06:45.452861"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Cro-Magnon"], ["climb_type", "Trad, TR"], ["difficulty", "5.10"], ["rating", 4.7], ["state", "Massachusetts"], ["climbing_area", "Central, MA"], ["image", "https://cdn2.apstatic.com/photos/climb/110755514_medium_1494353158.jpg"], ["created_at", "2020-12-15 20:06:45.458023"], ["updated_at", "2020-12-15 20:06:45.458023"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Insuhlation"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/108451651_medium_1494283770.jpg"], ["created_at", "2020-12-15 20:06:45.463260"], ["updated_at", "2020-12-15 20:06:45.463260"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (10.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.9ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Yum Yum Yab Yum"], ["climb_type", "Trad"], ["difficulty", "5.4"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/111685488_medium_1494299938.jpg"], ["created_at", "2020-12-15 20:06:45.488801"], ["updated_at", "2020-12-15 20:06:45.488801"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jackie"], ["climb_type", "Trad"], ["difficulty", "5.5"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/113892534_medium_1512181915.jpg"], ["created_at", "2020-12-15 20:06:45.509847"], ["updated_at", "2020-12-15 20:06:45.509847"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Broadway"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.1], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/112194226_medium_1494326133.jpg"], ["created_at", "2020-12-15 20:06:45.517829"], ["updated_at", "2020-12-15 20:06:45.517829"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (1.1ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The Lorax"], ["climb_type", "Boulder"], ["difficulty", "V3+"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/112037635_medium_1494317666.jpg"], ["created_at", "2020-12-15 20:06:45.525485"], ["updated_at", "2020-12-15 20:06:45.525485"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sit Down Traverse"], ["climb_type", "Boulder"], ["difficulty", "V5"], ["rating", 4.1], ["state", "Rhode Island"], ["climbing_area", "Lincoln Woods"], ["image", "https://cdn2.apstatic.com/photos/climb/106841479_medium_1494144816.jpg"], ["created_at", "2020-12-15 20:06:45.534170"], ["updated_at", "2020-12-15 20:06:45.534170"]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Higher Stannard"], ["climb_type", "Trad"], ["difficulty", "5.9-"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106147986_medium_1559059124.jpg"], ["created_at", "2020-12-15 20:06:45.550359"], ["updated_at", "2020-12-15 20:06:45.550359"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carey Corner"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.1], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/106378037_medium_1494103107.jpg"], ["created_at", "2020-12-15 20:06:45.557121"], ["updated_at", "2020-12-15 20:06:45.557121"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.3ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Snooky's Return"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106177217_medium_1494085678.jpg"], ["created_at", "2020-12-15 20:06:45.562401"], ["updated_at", "2020-12-15 20:06:45.562401"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Broken Sling"], ["climb_type", "Trad"], ["difficulty", "5.8+ PG13"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/108969906_medium_1494301770.jpg"], ["created_at", "2020-12-15 20:06:45.567332"], ["updated_at", "2020-12-15 20:06:45.567332"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hydroman"], ["climb_type", "Sport"], ["difficulty", "5.11a"], ["rating", 4.4], ["state", "Pennsylvania"], ["climbing_area", "South Central PA"], ["image", "https://cdn2.apstatic.com/photos/climb/117691387_medium_1567538102.jpg"], ["created_at", "2020-12-15 20:06:45.573207"], ["updated_at", "2020-12-15 20:06:45.573207"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Cowboy"], ["climb_type", "Trad"], ["difficulty", "5.5"], ["rating", 4.1], ["state", "Idaho"], ["climbing_area", "South Idaho"], ["image", "https://cdn2.apstatic.com/photos/climb/109255478_medium_1494343194.jpg"], ["created_at", "2020-12-15 20:06:45.578682"], ["updated_at", "2020-12-15 20:06:45.578682"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.4ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Vector"], ["climb_type", "Trad"], ["difficulty", "5.8+"], ["rating", 4.1], ["state", "Connecticut"], ["climbing_area", "Central Valley"], ["image", "https://cdn2.apstatic.com/photos/climb/105800580_medium_1557857310.jpg"], ["created_at", "2020-12-15 20:06:45.583642"], ["updated_at", "2020-12-15 20:06:45.583642"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (9.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.8ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Absurdland"], ["climb_type", "Trad"], ["difficulty", "5.8"], ["rating", 4.0], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106208347_medium_1494088101.jpg"], ["created_at", "2020-12-15 20:06:45.588410"], ["updated_at", "2020-12-15 20:06:45.588410"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Grand Central"], ["climb_type", "Trad"], ["difficulty", "5.9"], ["rating", 4.1], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/109228511_medium_1494342386.jpg"], ["created_at", "2020-12-15 20:06:45.607568"], ["updated_at", "2020-12-15 20:06:45.607568"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.5ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mental As Anything"], ["climb_type", "Sport"], ["difficulty", "5.9+"], ["rating", 4.0], ["state", "Pennsylvania"], ["climbing_area", "South Central PA"], ["image", "https://cdn2.apstatic.com/photos/climb/117810041_medium_1569804624.jpg"], ["created_at", "2020-12-15 20:06:45.615129"], ["updated_at", "2020-12-15 20:06:45.615129"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.8ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Baby"], ["climb_type", "Trad"], ["difficulty", "5.6"], ["rating", 4.0], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106811289_medium_1494142556.jpg"], ["created_at", "2020-12-15 20:06:45.621914"], ["updated_at", "2020-12-15 20:06:45.621914"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClimb Create (0.7ms)[0m  [1m[32mINSERT INTO "climbs" ("name", "climb_type", "difficulty", "rating", "state", "climbing_area", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Retribution"], ["climb_type", "Trad"], ["difficulty", "5.10b"], ["rating", 4.0], ["state", "New York"], ["climbing_area", "The Gunks"], ["image", "https://cdn2.apstatic.com/photos/climb/106058848_medium_1558469049.jpg"], ["created_at", "2020-12-15 20:06:45.629796"], ["updated_at", "2020-12-15 20:06:45.629796"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mClimb Load (0.9ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-12-15 15:07:43 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"XMAS", "username"=>"Reid", "password"=>"[FILTERED]", "user"=>{"username"=>"Reid", "password"=>"[FILTERED]", "name"=>"XMAS"}}
+  [1m[35m (7.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Reid"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "XMAS"], ["username", "Reid"], ["password_digest", "$2a$12$n2EC2xTEwE/mardf6zyBwe78Sa/h2bCK6nWpECL9KSM5rr6kvgc1C"], ["created_at", "2020-12-15 20:07:44.026445"], ["updated_at", "2020-12-15 20:07:44.026445"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Exists? (23.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "Reid"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers]   [1m[36mUserClimb Load (0.5ms)[0m  [1m[34mSELECT "user_climbs".* FROM "user_climbs" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers]   [1m[36mClimb Load (1.1ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs" INNER JOIN "user_climbs" ON "climbs"."id" = "user_climbs"."climb_id" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (98.41ms)
+Completed 201 Created in 486ms (Views: 70.6ms | ActiveRecord: 78.9ms | Allocations: 29901)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 15:07:44 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (1.1ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.15ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 1.1ms | Allocations: 27446)
+
+
+Started POST "/users" for ::1 at 2020-12-15 15:08:05 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Johnny Walker", "username"=>"jw", "password"=>"[FILTERED]", "user"=>{"username"=>"jw", "password"=>"[FILTERED]", "name"=>"Johnny Walker"}}
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "jw"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Johnny Walker"], ["username", "jw"], ["password_digest", "$2a$12$tmutgqDb9MK2IAwwS1QB1.0zZPBdBQ0ZIt/9O1Zn.QayQUPZdsowe"], ["created_at", "2020-12-15 20:08:06.149360"], ["updated_at", "2020-12-15 20:08:06.149360"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "jw"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers]   [1m[36mUserClimb Load (0.4ms)[0m  [1m[34mSELECT "user_climbs".* FROM "user_climbs" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers]   [1m[36mClimb Load (0.4ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs" INNER JOIN "user_climbs" ON "climbs"."id" = "user_climbs"."climb_id" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.76ms)
+Completed 201 Created in 298ms (Views: 4.4ms | ActiveRecord: 6.4ms | Allocations: 8033)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 15:08:06 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.8ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.96ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.8ms | Allocations: 20783)
+
+
+Started POST "/login" for ::1 at 2020-12-15 15:08:21 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"jw", "password"=>"[FILTERED]", "user"=>{"username"=>"jw", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jw"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:10:in `create'
+[active_model_serializers]   [1m[36mUserClimb Load (4.0ms)[0m  [1m[34mSELECT "user_climbs".* FROM "user_climbs" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/auth_controller.rb:16:in `create'
+[active_model_serializers]   [1m[36mClimb Load (0.3ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs" INNER JOIN "user_climbs" ON "climbs"."id" = "user_climbs"."climb_id" WHERE "user_climbs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/auth_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (7.81ms)
+Completed 202 Accepted in 285ms (Views: 3.9ms | ActiveRecord: 4.7ms | Allocations: 4245)
+
+
+Started GET "/climbs" for ::1 at 2020-12-15 15:08:21 -0500
+Processing by ClimbsController#index as */*
+  [1m[36mClimb Load (0.5ms)[0m  [1m[34mSELECT "climbs".* FROM "climbs"[0m
+  ↳ app/controllers/climbs_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.4ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.5ms | Allocations: 20783)
+
+

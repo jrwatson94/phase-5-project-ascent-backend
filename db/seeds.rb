@@ -11,7 +11,6 @@ User.destroy_all
 Climb.destroy_all
 UserClimb.destroy_all
 
-User.create(name:"Reid")
 # UserClimb.create(user_id: User.first.id, climb_id: Climb.first.id)
 ROUTES[:routes][0..100].each do |route|
     Climb.create(
