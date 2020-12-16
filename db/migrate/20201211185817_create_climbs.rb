@@ -8,6 +8,7 @@ class CreateClimbs < ActiveRecord::Migration[6.0]
       t.string :state
       t.string :climbing_area
       t.string :image
+      t.string :url
 
       t.timestamps
     end

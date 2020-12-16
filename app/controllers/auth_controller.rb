@@ -15,7 +15,7 @@ class AuthController < ApplicationController
        
           render json: { user: UserSerializer.new(@user), jwt: token }, status: :accepted
         else
-          render json: { message:  user.errors.full_messages  }, status: :unauthorized
+          render json: { message:  @user.errors.full_messages  }, status: :unauthorized
         end
       end
     

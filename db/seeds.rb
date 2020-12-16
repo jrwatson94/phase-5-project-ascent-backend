@@ -12,7 +12,7 @@ Climb.destroy_all
 UserClimb.destroy_all
 
 # UserClimb.create(user_id: User.first.id, climb_id: Climb.first.id)
-ROUTES[:routes][0..100].each do |route|
+ROUTES[:routes].each do |route|
     Climb.create(
         name: route[:name],
         climb_type: route[:type],
@@ -20,7 +20,8 @@ ROUTES[:routes][0..100].each do |route|
         rating: route[:stars],
         state: route[:location][0],
         climbing_area: route[:location][1],
-        image: route[:imgMedium]
+        image: route[:imgMedium],
+        url: route[:url]
     )
 end
 
