@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2020_12_11_185817) do
     t.string "climbing_area"
     t.string "image"
     t.string "url"
+    t.float "lat"
+    t.float "long"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

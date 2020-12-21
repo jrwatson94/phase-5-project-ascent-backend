@@ -9,6 +9,8 @@ class CreateClimbs < ActiveRecord::Migration[6.0]
       t.string :climbing_area
       t.string :image
       t.string :url
+      t.float :lat
+      t.float :long
 
       t.timestamps
     end

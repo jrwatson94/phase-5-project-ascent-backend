@@ -20,7 +20,9 @@ ROUTES[:routes].each do |route|
         state: route[:location][0],
         climbing_area: route[:location][1],
         image: route[:imgMedium],
-        url: route[:url]
+        url: route[:url],
+        lat: route[:latitude],
+        long: route[:longitude]
     )
 end
 
