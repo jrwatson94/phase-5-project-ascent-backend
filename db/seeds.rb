@@ -11,7 +11,6 @@ User.destroy_all
 Climb.destroy_all
 UserClimb.destroy_all
 
-# UserClimb.create(user_id: User.first.id, climb_id: Climb.first.id)
 ROUTES[:routes].each do |route|
     Climb.create(
         name: route[:name],
@@ -24,6 +23,7 @@ ROUTES[:routes].each do |route|
         url: route[:url]
     )
 end
+
 
 
 

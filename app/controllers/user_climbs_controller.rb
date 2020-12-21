@@ -14,6 +14,12 @@ class UserClimbsController < ApplicationController
         user_climb = UserClimb.create(user_climb_params)
         render json: user_climb
     end
+
+    def update 
+        user_climb = UserClimb.find(params[:id])
+        user_climb.update(user_climb_params)
+        render json: user_climb
+    end
     def destroy
         user_climb = UserClimb.find(params[:id])
         user_climb.destroy
