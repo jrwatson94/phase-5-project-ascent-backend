@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    wrap_parameters :user, include: [:username, :password, :name]
+    wrap_parameters :user, include: [:username, :password, :name, :interests, :bio]
     skip_before_action :authorized
     def index 
         @users = User.all
@@ -10,10 +10,6 @@ class UsersController < ApplicationController
       user = User.find(params[:id])
       render json: user
     end
-    # def new 
-    #     user = User.new
-    #     render json: user
-    # end
 
     def create 
         @user = User.create(user_params)
@@ -23,7 +19,18 @@ class UsersController < ApplicationController
         else
           render json: { error: @user.errors.full_messages }, status: :not_acceptable
         end
-    end 
+    end
+
+    def update 
+      user = User.find(params[:id])
+      user.update(user_params)
+      render json: user
+    end
+    
+    def destroy
+      user = User.find(params[:id])
+      user.destroy
+  end
 
     private
 
