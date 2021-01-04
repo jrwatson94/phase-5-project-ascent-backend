@@ -1,7 +1,10 @@
 class ReviewsController < ApplicationController
     skip_before_action :authorized
-
-
+    def index
+        reviews = Review.all
+        render json: reviews
+    end
+    
     def create
         review = Review.create(review_params)
         render json: review
@@ -25,6 +28,6 @@ class ReviewsController < ApplicationController
 
     private 
     def review_params 
-        params.require(:review).permit(:user_climb_id, :title, :content, :stars, :author, :author_id)
+        params.require(:review).permit(:user_climb_id, :title, :content, :stars, :author, :author_id, :climb_name)
     end
 end

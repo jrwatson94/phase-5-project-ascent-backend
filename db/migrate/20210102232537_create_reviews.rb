@@ -7,6 +7,7 @@ class CreateReviews < ActiveRecord::Migration[6.0]
       t.string :content
       t.string :author
       t.integer :author_id
+      t.string :climb_name
 
       t.timestamps
     end
