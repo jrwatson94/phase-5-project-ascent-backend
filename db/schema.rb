@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2021_01_02_232537) do
     t.string "title"
     t.integer "stars"
     t.string "content"
+    t.string "author"
+    t.integer "author_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

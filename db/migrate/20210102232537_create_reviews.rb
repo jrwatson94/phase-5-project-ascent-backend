@@ -5,6 +5,8 @@ class CreateReviews < ActiveRecord::Migration[6.0]
       t.string :title
       t.integer :stars
       t.string :content
+      t.string :author
+      t.integer :author_id
 
       t.timestamps
     end

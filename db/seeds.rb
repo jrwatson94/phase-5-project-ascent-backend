@@ -10,6 +10,7 @@ require_relative "./climbs.rb"
 User.destroy_all
 Climb.destroy_all
 UserClimb.destroy_all
+Review.destroy_all
 
 ROUTES[:routes].each do |route|
     Climb.create(
